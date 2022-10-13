@@ -14,82 +14,87 @@
 </head>
 
 <body>
-    <header>
-        <nav id="header-top" class="navbar navbar-light bg-light"
-            style="width: 100%;display: flex;justify-content: flex-end">
-            <div class="turma-Top"><span>20352GRA2GNB</span></div>
-            <form id="pesquisar-conjunto" class="form-inline">
-                <input id="pesquisa" class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
-                    aria-label="Search">
-                <button id="pesquisa-botao" type=""><img src="/images/lupa.png" alt="Pesquisar"></button>
-            </form>
-            
-        </nav>
-    </header>
+    <nav class="header-top">
+        <div class="turma-Top">
+            <i class="fas fa-bars text-white" id="OpenMenu"></i>
+            <span>20352GRA2GNB</span>
+        </div>
 
-    <i class="fas fa-bars" id="menu"></i>
+        <form id="pesquisar-conjunto" class="form-inline">
+            <input id="pesquisa" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button id="pesquisa-botao" type=""><img src=alt="Pesquisar"></button>
+        </form>
+    </nav>
 
-    <div id="sidebar">
-        <i class="fas fa-times-circle" id="close"></i>
+    <dialog class="menuDialog">
+        <i class="fas fa-times-circle" class="close"></i>
         <div class="logo-menu">
             <img src="/images/logo-montech-white.svg" style="width: 120px;" />
         </div>
+
         <div>
             <ul>
                 <li>Home</li>
                 <li>Notificação</li>
             </ul>
         </div>
-    </div>
+        </dialog>
 
-    <main class="main">
-        <table class="table">
-            <thead class="thead thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th style="width: 10%;" scope="col">Matricula</th>
-                    <th style="width: 30%;" scope="col">Nome</th>
-                    <th style="width: 10%;" cope="col">Idade</th>
-                    <th scope="col">Turma</th>
-                    <th scope="col">Status</th>
-                </tr>
-            </thead>
+        <main class="main">
 
-            <tbody>
-                <tr class="a1">
-                    <th scope="row">1</th>
-                    <td>01564896</td>
-                    <td>Carlos Augusto Ferreira da Silva</td>
-                    <td>19</td>
-                    <td class="row-turma">2NB</td>
-                    <td>Ativo</td>
-                </tr>
+            <button class="openDialog">Novo aluno</button>
 
-                <tr class="a2">
-                    <th scope="row">2</th>
-                    <td>01564655</td>
-                    <td>Matheus Sena Diniz</td>
-                    <td>18</td>
-                    <td class="row-turma">2NB</td>
-                    <td>Ativo</td>
-                </tr>
+            <dialog class="addAlunoScreen">
+                funcionando
+                <button class="closeDialog">Fechar</button>
+            </dialog>
+            <table class="table">
+                <thead class="thead thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th style="width: 10%;" scope="col">Matricula</th>
+                        <th style="width: 30%;" scope="col">Nome</th>
+                        <th style="width: 10%;" cope="col">Idade</th>
+                        <th scope="col">Turma</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
 
-                <tr class="a3">
-                    <th scope="row">3</th>
-                    <td>01564988</td>
-                    <td>Maria Christina Santana</td>
-                    <td>20</td>
-                    <td class="row-turma">2NB</td>
-                    <td>Ativo</td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr class="a1">
+                        <th scope="row">1</th>
+                        <td>01564896</td>
+                        <td>Carlos Augusto Ferreira da Silva</td>
+                        <td>19</td>
+                        <td class="row-turma">2NB</td>
+                        <td>Ativo</td>
+                    </tr>
 
-        </table>
-    </main>
+                    <tr class="a2">
+                        <th scope="row">2</th>
+                        <td>01564655</td>
+                        <td>Matheus Sena Diniz</td>
+                        <td>18</td>
+                        <td class="row-turma">2NB</td>
+                        <td>Ativo</td>
+                    </tr>
+
+                    <tr class="a3">
+                        <th scope="row">3</th>
+                        <td>01564988</td>
+                        <td>Maria Christina Santana</td>
+                        <td>20</td>
+                        <td class="row-turma">2NB</td>
+                        <td>Ativo</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </main>
 
 
 
-    <script src="../js/script.js"></script>
+        <script src="../js/script.js"></script>
 </body>
 
 </html>

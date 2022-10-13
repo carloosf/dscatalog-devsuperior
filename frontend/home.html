@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Montech - Home</title>
 </head>
+
 <body>
-    
+    <header>
+        <img class="logo" src="/images/logo-montech-white.svg" alt="Logo">
+    </header>
+    <main>
+
+        <div class="hero" style="max-width: 100%">
+
+            <img class="slides" src="/images/slide1.png">
+            <img class="slides" src="/images/slide2.png">
+            <img class="slides" src="/images/slide3.png">
+
+            <div class="slide-buttons"
+                style="width:100%">
+
+                <div class="slide-buttons-individual slide-button-right" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="slide-buttons-individual slide-button-left" onclick="plusDivs(1)">&#10095;</div>
+
+                <span onclick="currentDiv(1)"></span>
+                <span onclick="currentDiv(2)"></span>
+                <span onclick="currentDiv(3)"></span>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="/js/home-slide.js"></script>
 </body>
+
 </html>

@@ -1,28 +1,25 @@
-const SideBar = {
-    bar: document.querySelector('#sidebar'),
-    menu: document.querySelector('#menu'),
-    closeIcon: document.querySelector('#close'),
-    turmaTop:document.querySelector(".turma-Top"),
-    main: document.querySelector(".main"),
+const menu = document.querySelector('.menuDialog')
 
-    open: function () {
-        SideBar.turmaTop.style.right = '43%'
-        SideBar.bar.style.width = '20%'
-        SideBar.main.style.left = '20%'
-    },
+const buttonOpenMenu = document.querySelector('#OpenMenu')
+const buttonCloseMenu = document.querySelector('.close')
 
-    close: function () {
-        SideBar.bar.style.width = '0';
-        SideBar.turmaTop.style.right = '61%'
-        SideBar.main.style.left = '0'
-    },
-
-    init: function () {
-        this.menu.addEventListener('click', this.open);
-        this.closeIcon.addEventListener('click', this.close);
-    }
+buttonOpenMenu.onclick = function (){
+    menu.showModal()
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    SideBar.init();
-})
+buttonCloseMenu.onclick = function (){
+    menu.close()
+}
+
+const addAlunoDialog = document.querySelector(".addAlunoScreen")
+
+const buttonOpenDialog = document.querySelector(".openDialog")
+const buttonCloseDialog = document.querySelector(".closeDialog")
+
+buttonOpenDialog.onclick = function (){
+    addAlunoDialog.show()
+}
+
+buttonCloseDialog.onclick = function (){
+    addAlunoDialog.close()
+}

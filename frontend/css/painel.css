@@ -1,3 +1,8 @@
+:root {
+  --cor-primaria: #1b4d76;
+  --cor-secundaria: #e8f1f2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,88 +18,75 @@ body {
   width: 100vw;
 }
 
-header {
-  background-color: #fdf2f2;
-  display: flex;
+.header-top {
+  background-color: var(--cor-primaria);
+  display: grid;
   height: 10%;
+  grid-template-columns: repeat(2, 1fr);
   transition: 0.8s;
   box-shadow: 1px 1px 5px 0.2px #a7a1a1;
   align-items: center;
   transition: width 2s linear 1s;
+  width: 100%;
 }
 
-.turma-Top {
+/*.turma-Top {
   position: relative;
-  right: 61%;
   transition: 0.8s;
-  top: 3px;
   display: flex;
+  color: white;
   align-items: center;
   font-size: large;
-}
+}*/
 
-#pesquisar-conjunto {
+.pesquisar-conjunto {
+  width: 100%;
   position: relative;
-  right: 5%;
-  width: 25%;
+  right: 20px;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 #pesquisa {
-  padding: 2%;
+  width: 50%;
   font-size: 90%;
   border: 0.6px solid #cec6c6;
 }
 
-#pesquisa:hover{
-  background-color: #f9f9f9;
-  border: 0.9px solid #c3c2c2;
-}
-
 #pesquisa-botao {
   width: auto;
-  font-size: 5px;
   cursor: pointer;
   padding: 1%;
   border: none;
-  background-color: #fdf2f2;
 }
 
-#pesquisa-botao:active{
-  border: 1px solid saddlebrown;
-
+#pesquisa-botao:active {
+  border: none;
 }
 
+.pesquisa-botao-icon {
+  background-color: var(--cor-primaria);
+  width: 30px;
+}
 
-#sidebar {
+.menuDialog {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   background-color: #1f1c2b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* Important */
-  z-index: 999;
-  width: 0px;
-  overflow: hidden;
   transition: width 0.8s;
-}
+} 
 
-#close {
+.close {
   font-size: 20px;
   color: #fff;
   position: absolute;
-  left: 200px;
-  top: 20px;
   cursor: pointer;
 }
 
-#menu {
+#openMenu {
   font-size: 20px;
   color: #1f1c2b;
   position: absolute;
@@ -103,32 +95,24 @@ header {
   cursor: pointer;
 }
 
-.logo-menu {
-  position: relative;
-  bottom: 30%;
-  right: 5%;
-}
-
-ul {
-  position: relative;
-  bottom: 100%;
+.sidebar-options {
   list-style: none;
   width: 100%;
   right: 8%;
-
+  height: 100%;
 }
+
 
 li {
   text-transform: uppercase;
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 30px;
   cursor: pointer;
 }
 
 li:hover {
-  border-bottom: 0.5px #fdf2f2 solid;
+  background: #000;
 }
 
 /* PAINEL */
@@ -141,8 +125,28 @@ li:hover {
 }
 
 
-tbody :hover{
+tbody :hover {
   background: rgb(234, 228, 228);
   cursor: pointer;
 }
 
+/*ADICIONAR ALUNO*/
+.openDialog {}
+
+.subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addAlunoScreen {
+  position: relative;
+  left: 25%;
+  top: 10%;
+  width: 50%;
+  height: 70%;
+}
+
+.addAlunoScreen::backdrop {
+  background-color: rgb(0 0 0 / 0.4);
+}
