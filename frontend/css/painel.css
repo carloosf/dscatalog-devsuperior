@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 :root {
   --cor-primaria: #1b4d76;
   --cor-secundaria: #e8f1f2;
@@ -8,145 +10,156 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   width: 100vw;
+  background-color: var(--cor-secundaria);
 }
 
-.header-top {
-  background-color: var(--cor-primaria);
-  display: grid;
-  height: 10%;
-  grid-template-columns: repeat(2, 1fr);
-  transition: 0.8s;
-  box-shadow: 1px 1px 5px 0.2px #a7a1a1;
-  align-items: center;
-  transition: width 2s linear 1s;
-  width: 100%;
-}
-
-/*.turma-Top {
-  position: relative;
-  transition: 0.8s;
-  display: flex;
-  color: white;
-  align-items: center;
-  font-size: large;
-}*/
-
-.pesquisar-conjunto {
-  width: 100%;
-  position: relative;
-  right: 20px;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#pesquisa {
-  width: 50%;
-  font-size: 90%;
-  border: 0.6px solid #cec6c6;
-}
-
-#pesquisa-botao {
-  width: auto;
-  cursor: pointer;
-  padding: 1%;
-  border: none;
-}
-
-#pesquisa-botao:active {
-  border: none;
-}
-
-.pesquisa-botao-icon {
-  background-color: var(--cor-primaria);
-  width: 30px;
-}
-
-.menuDialog {
+.sidebar {
   position: absolute;
+  box-shadow: 0px 0px 4px 1px;
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #1f1c2b;
+  background-color: var(--cor-primaria);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  /* Important */
+  z-index: 999;
+  width: 0px;
+  overflow: hidden;
   transition: width 0.8s;
-} 
+}
 
-.close {
+#close {
   font-size: 20px;
   color: #fff;
-  position: absolute;
   cursor: pointer;
 }
 
-#openMenu {
+.logo-menu {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  right: 2px;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 1px 0.001px;
+}
+
+#menu {
   font-size: 20px;
-  color: #1f1c2b;
   position: absolute;
   left: 20px;
   top: 20px;
   cursor: pointer;
+  color: white;
 }
 
-.sidebar-options {
+ul {
   list-style: none;
-  width: 100%;
-  right: 8%;
-  height: 100%;
+  cursor: pointer;
 }
-
 
 li {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--cor-secundaria);
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-}
-
-li:hover {
-  background: #000;
-}
-
-/* PAINEL */
-
-.main {
-  padding-top: 5%;
-  width: auto;
-  transition: 0.8s;
-  top: 10%;
-}
-
-
-tbody :hover {
-  background: rgb(234, 228, 228);
-  cursor: pointer;
-}
-
-/*ADICIONAR ALUNO*/
-.openDialog {}
-
-.subheader {
+  padding: 10px;
+  padding-left: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.addAlunoScreen {
-  position: relative;
-  left: 25%;
-  top: 10%;
-  width: 50%;
-  height: 70%;
+li:hover {
+  background: rgb(0, 0, 0, .15);
+  cursor: pointer;
 }
 
-.addAlunoScreen::backdrop {
-  background-color: rgb(0 0 0 / 0.4);
+header {
+  background-color: var(--cor-primaria);
+  width: 100%;
+  height: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-menu-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icons-menu {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.turma-nome {
+  position: relative;
+  left: 12%;
+  color: #e8f1f2;
+  transition: 0.8s;
+}
+
+.container-pesquisa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  right: 5%;
+}
+
+.pesquisa{
+  width: 50%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.pesquisa-campo {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ffffff;
+  border-right: none;
+  padding: 6.7px;
+  height: 10%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.pesquisa-campo:focus{
+  color: #00B4CC;
+}
+
+.pesquisa-button {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background-color: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+main {
+  background-color: var(--cor-secundaria);
+  width: 100%;
+  height: 90%;
 }

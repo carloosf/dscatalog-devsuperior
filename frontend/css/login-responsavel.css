@@ -25,9 +25,11 @@ header {
     transition: 0.8s;
     box-shadow: 1px 1px 5px 0.2px #a7a1a1;
 }
+
 .logo-header{
     margin-left: 10%;
 }
+
 .forget{
     text-decoration: none;
     color: #3b7978;

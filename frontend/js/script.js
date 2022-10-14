@@ -1,25 +1,26 @@
-const menu = document.querySelector('.menuDialog')
+const SideBar = {
+  bar: document.querySelector('#sidebar'),
+  menu: document.querySelector('#menu'),
+  closeIcon: document.querySelector('#close'),
+  turmaNome: document.querySelector('#turma-nome'),
 
-const buttonOpenMenu = document.querySelector('#OpenMenu')
-const buttonCloseMenu = document.querySelector('.close')
+  open: function() {
+    SideBar.bar.style.width = '250px';
+    SideBar.turmaNome.style.left = '40%';
+  },
 
-buttonOpenMenu.onclick = function (){
-    menu.showModal()
+  close: function() {
+    SideBar.bar.style.width = '0';
+    SideBar.turmaNome.style.left = '12%';
+  }, 
+
+  init: function() {
+    this.menu.addEventListener('click', this.open);
+    this.closeIcon.addEventListener('click', this.close);
+  }
 }
 
-buttonCloseMenu.onclick = function (){
-    menu.close()
-}
+document.addEventListener('DOMContentLoaded', () => {
+  SideBar.init();
+})
 
-const addAlunoDialog = document.querySelector(".addAlunoScreen")
-
-const buttonOpenDialog = document.querySelector(".openDialog")
-const buttonCloseDialog = document.querySelector(".closeDialog")
-
-buttonOpenDialog.onclick = function (){
-    addAlunoDialog.show()
-}
-
-buttonCloseDialog.onclick = function (){
-    addAlunoDialog.close()
-}
