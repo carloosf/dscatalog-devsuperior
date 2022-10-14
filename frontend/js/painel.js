@@ -1,3 +1,6 @@
+
+//SideBar Animação//
+
 const SideBar = {
   bar: document.querySelector('#sidebar'),
   menu: document.querySelector('#menu'),
@@ -24,3 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
   SideBar.init();
 })
 
+//CADASTRAR ALUNO//
+
+
+const openCadastroAluno = document.querySelector("#open-cadastro-aluno")
+const screenCadastroAluno = document.querySelector("#screen-cadastro-aluno")
+const closeCadastroAluno = document.querySelector("#close-cadastro-aluno")
+
+openCadastroAluno.onclick = function() {
+  screenCadastroAluno.showModal()
+}
+
+closeCadastroAluno.onclick = function() {
+  screenCadastroAluno.close()
+}
