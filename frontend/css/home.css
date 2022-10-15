@@ -23,31 +23,51 @@ header {
     grid-template-columns: 1fr 1fr;
 }
 
+/* NAV ANIMADO */
+
 .nav-infos {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-direction: row;
     width: 100%;
     position: relative;
     right: 100px;
 }
 
-.nav-infos * {
-    margin-inline: 10px;
-    color: var(--cor-secundaria);
+.nav-infos-unidade{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.a {
     list-style: none;
+    text-decoration: none;
+    padding-inline: 3px;
+}
+
+.border-bottom-animation {
+    display: inline-block;
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
-
-.nav-infos-unidade::after {
+.border-bottom-animation::after {
+    position: relative;
+    top: 4px;
+    content: "";
     display: block;
+    width: 0;
+    height: 3px;
+    background: var(--cor-secundaria);
+    transition: width 1s;
 }
 
-.nav-infos-unidade:hover::after {
-    transform: scaleX(1);
+.border-bottom-animation:hover::after {
+    width: 100%;
+    transition: width 1s;
 }
+
+/* ------------------ */
 
 .logo {
     width: 30%;
