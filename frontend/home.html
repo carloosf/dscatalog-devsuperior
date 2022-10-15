@@ -12,31 +12,37 @@
 <body>
     <header>
         <img class="logo" src="/images/logo-montech-white.svg" alt="Logo">
+            <ul class="nav-infos">
+                <li class="nav-infos-unidade"><a href="#">Entrar</a></li>
+                <li class="nav-infos-unidade"><a href="#">Contatos</a></li>
+                <li class="nav-infos-unidade"><a href="#">Sobre</a></li>
+            </ul>
     </header>
-    <main>
 
-        <div class="hero" style="max-width: 100%">
+    <div class="hero">
+        <img class="slides" src="/images/slide1.png">
+        <img class="slides" src="/images/slide2.png">
+        <img class="slides" src="/images/slide3.png">
 
-            <img class="slides" src="/images/slide1.png">
-            <img class="slides" src="/images/slide2.png">
-            <img class="slides" src="/images/slide3.png">
+        <div class="slide-buttons"
+            style="width:100%">
 
-            <div class="slide-buttons"
-                style="width:100%">
+            <div class="slide-buttons-individual slide-button-right" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="slide-buttons-individual slide-button-left" onclick="plusDivs(1)">&#10095;</div>
 
-                <div class="slide-buttons-individual slide-button-right" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="slide-buttons-individual slide-button-left" onclick="plusDivs(1)">&#10095;</div>
+            <span onclick="currentDiv(1)"></span>
+            <span onclick="currentDiv(2)"></span>
+            <span onclick="currentDiv(3)"></span>
 
-                <span onclick="currentDiv(1)"></span>
-                <span onclick="currentDiv(2)"></span>
-                <span onclick="currentDiv(3)"></span>
-
-            </div>
         </div>
+    </div>
+
+    <main>
+        a
     </main>
 
     <footer>
-
+        a
     </footer>
 
     <script src="/js/home-slide.js"></script>

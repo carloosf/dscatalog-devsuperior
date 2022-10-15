@@ -29,15 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //CADASTRAR ALUNO//
 
-
-const openCadastroAluno = document.querySelector("#open-cadastro-aluno")
-const screenCadastroAluno = document.querySelector("#screen-cadastro-aluno")
-const closeCadastroAluno = document.querySelector("#close-cadastro-aluno")
-
-openCadastroAluno.onclick = function() {
-  screenCadastroAluno.showModal()
-}
-
-closeCadastroAluno.onclick = function() {
-  screenCadastroAluno.close()
-}
