@@ -15,9 +15,11 @@ html {
     height: 100%;
 }
 
-header {
+.header-logo {
+    z-index: 999;
+    position: absolute;
     width: 100%;
-    background-color: var(--cor-primaria);
+    background-color: none;
     height: 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -34,7 +36,7 @@ header {
     right: 100px;
 }
 
-.nav-infos-unidade{
+.nav-infos-unidade {
     display: inline-block;
     margin-right: 20px;
 }
@@ -77,8 +79,7 @@ header {
     cursor: pointer;
 }
 
-main {
-    background-color: black;
+section {
     min-height: 50%;
     height: auto;
 }
@@ -92,34 +93,109 @@ footer {
 
 .hero {
     width: 100%;
-    height: 400px;
-}
-
-.hero * {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-}
-
-.slide-buttons-individual {
-    position: relative;
-    cursor: pointer;
-    margin-inline: 46%;
-    padding: 5px;
-    color: var(--cor-secundaria);
-    height: 100%;
+    height: 629px;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    /*PARA NAO SELECIONAR O BOTAO*/
-    user-select: none;
+    border-bottom: 0.1px solid black;
 }
 
-.slide-buttons {
-    height: inherit;
+.hero-image {
+    overflow: hidden;
+    object-fit: cover;
 }
 
-.slides {
+.hero-text {
+    position: absolute;
+    left: 5%;
+    z-index: 2;
+    color: var(--cor-secundaria);
+    width: 40%;
+}
+
+.hero-text-button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    border: 0.5px solid white;
+    background-color: white;
+    color: rgb(57, 47, 91);
+    cursor: pointer;
+}
+
+.hero-text-button:hover {
+    background-color: rgb(238, 235, 235);
+}
+
+
+/* CARD */
+
+.propostas {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    margin: 50px;
+}
+
+.proposta-card {
     width: 100%;
-    height: 400px;
+    list-style: none;
+
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 60px 8px 1fr;
+    border-radius: 10%;
+    margin: 10px;
+    text-align: center;
+}
+
+.proposta-icon {
+    justify-self: center;
+    align-self: center;
+}
+
+.proposta-card-description {
+    align-self: center;
+    justify-self: center;
+    font-size: 10px;
+    font-weight: thin;
+}
+
+.proposta-card-title {
+    margin-top: 8px;
+    align-self: center;
+    justify-self: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.proposta-card:nth-child(odd) {
+    background-color: #5c656f;
+    color: rgb(255, 255, 255);
+    transition: background 0.5s;
+}
+
+.proposta-card:nth-child(even) {
+    box-shadow: 1px 1px 2px 1px black;
+    color: #000000;
+    transition: background 0.5s;
+}
+
+.proposta-card:nth-child(even):hover {
+    box-shadow: 1px 1px 2px 1px black;
+    background-color: #e5e5e5;
+}
+
+.proposta-card:nth-child(odd):hover {
+    background-color: #364251;
+}
+
+.title-propostas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
 }
