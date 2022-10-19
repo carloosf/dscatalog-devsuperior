@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/painel.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Painel Escolar - Montech</title>
+</head>
+
+<body>
+
+  <header class="header" style="box-shadow: 15px 15px 10px 20px gray;">
+    <div class="container-menu-name">
+      <img src="/images/menu.ico" id="menu"></img>
+      <p class="turma-nome" id="turma-nome">GRA0280102DNB</p>
+    </div>
+
+    <div class="container-pesquisa">
+      <div class="pesquisa">
+        <input type="text" class="pesquisa-campo" placeholder="O que deseja procurar?">
+        <button type="submit" class="pesquisa-button">
+          <img src="/images/lupa.png" style="width: 35px;"></img>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <div class="top-menu">
+      <img src="/images/logo-montech-white.svg" alt="logo" class="logo-menu">
+      <img src="/images/close.png" class="close" id="close" style="width: 15px;"></img>
+    </div>
+
+    <ul>
+      <li> <img src="/images/home.png" class="icons-menu" alt=""> Inicio</li>
+      <li> <img src="/images/book.png" class="icons-menu" alt=""> Salas</li>
+      <li> <img src="/images/responsavel.png" class="icons-menu" alt=""> Responsavel</li>
+      <li> <img src="/images/data.png" class="icons-menu" alt=""> Dados</li>
+      <li> <img src="/images/about.png" class="icons-menu" alt=""> Sobre</li>
+      <li> <img src="/images/settings.png" class="icons-menu" alt=""> Configurações</li>
+    </ul>
+  </div>
+
+  <nav class="tools-painel">
+
+    <div class="tools-painel-sala">
+      
+      <button type="button" class="btn btn-success mt-2 ml-2 add-aluno" data-toggle="modal" data-target="#meuModal">Adicionar
+        aluno</button>
+      <div class="alunos-nav"><span> Alunos(</span> <span id="qtd-alunos" class="qtd-alunos">0</span> <span>)</span>
+
+
+        <div id="meuModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h3>Cadastrar Novo Aluno</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Corpo do modal -->
+              <div class="modal-body">
+
+                <form action="/action_page.php">
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Matricula</span>
+                    <input type="text" class="form-control" id="matricula" placeholder="Matricula"
+                      aria-label="Matricula" aria-describedby="basic-addon1" pattern="{0-9}[2]" required />
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Nome</span>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome" aria-label="Nome"
+                      aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Idade</span>
+                    <input type="number" id="idade" class="form-control" placeholder="Idade" aria-label="Idade"
+                      aria-describedby="basic-addon1" pattern="{0-9}[2]" required>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-whatsapp"></i></span>
+                    <input type="tel" id="idade" class="form-control" placeholder="Numero do Responsavel"
+                      aria-label="Idade" aria-describedby="basic-addon1" pattern="{0-9}[2]" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <select class="form-select form-select-sm" id="status" aria-label=".form-select-sm example">
+                      <option selected>Ativo</option>
+                      <option value="1">Inativo</option>
+                    </select>
+                  </div>
+                </form>
+
+              </div>
+
+              <!-- Rodapé do modal-->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" onclick="addAluno()" class="btn btn-primary" data-dismiss="modal">Adicionar
+                  Aluno</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="config-sala">
+      <!--
+      <span>Confirgurações da Sala</span>
+      <img src="../images/settings.png" alt="" style="width: 30px; height: 30px;">
+    </div>
+-->
+  </nav>
+
+  <div class="container-table">
+    <table class="tabela-aluno">
+      <thead>
+        <th class="coluna-item">ID</th>
+        <th class="coluna-item">Matricula</th>
+        <th class="coluna-item">Nome</th>
+        <th class="coluna-item">Idade</th>
+        <th class="coluna-item">Media</th>
+        <th class="coluna-item">Status</th>
+      </thead>
+
+      <tbody>
+        <tr id="aluno">
+          <td>1</td>
+          <td>01564896</td>
+          <td>Carlos Augusto Ferreira da Silva</td>
+          <td>19</td>
+          <td>7.8</td>
+          <td>Ativo</td>
+        </tr>
+
+        <tr id="aluno">
+          <td>2</td>
+          <td>01548954</td>
+          <td>Maria Christina Barbosa</td>
+          <td>20</td>
+          <td>9.5</td>
+          <td>Ativo</td>
+        </tr>
+      </tbody>
+  </div>
+
+  </table>
+
+  <div id="tela-cadastro-aluno" class="tela-cadastro-aluno">
+
+
+
+  </div>
+
+  <script src="/js/front/painel.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

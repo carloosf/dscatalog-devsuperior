@@ -6,124 +6,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/css-smarthphone/home-responsivo.css" media="screen and (max-width: 600px)">
     <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
     <title>Montech - Home</title>
 </head>
 
 <body>
-    <i class="fa-solid fa-circle-chevron-up upbutton fa-2xl" id="upScroll"></i>
+    <div class="screen">
 
-    <header>
-        <div class="header-logo">
-            <img class="logo" src="/images/logo-montech-white.svg" alt="Logo">
-            <ul class='nav-infos'>
-                <li class='nav-infos-unidade'><a class="border-bottom-animation" href="#">Entrar</a></li>
-                <li class='nav-infos-unidade'> <a class="border-bottom-animation" href="#">Contatos</a></li>
-                <li class='nav-infos-unidade'> <a class="border-bottom-animation" href="#">Sobre</a></li>
-            </ul>
-        </div>
+        <i class="fa-solid fa-circle-chevron-up upbutton fa-2xl" id="upScroll"></i>
 
-        <div class="hero">
-            <div class="hero-text">
-                <h1>lorem epsun lorem epsun</h1><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, aperiam exercitationem aut
-                    explicabo
-                    omnis maiores. Accusantium velit blanditiis atque impedit unde. Iste ex libero voluptatem quidem
-                    facere
-                    nostrum deleniti aliquam.</p>
-                <button class="hero-text-button">Conferir</button>
+        <header>
+
+            <div class="header-logo">
+                <img class="logo" src="/images/logo-montech-white.svg" alt="Logo">
+                <ul class='nav-infos'>
+                    <li class='nav-infos-unidade'><a class="border-bottom-animation"
+                            href="/pages/login-opcao.html">Entrar</a></li>
+                    <li class='nav-infos-unidade'> <a class="border-bottom-animation" href="#">Contatos</a></li>
+                    <li class='nav-infos-unidade'> <a class="border-bottom-animation" href="#">Sobre</a></li>
+                </ul>
+
+                <img src="/images/user.png" alt="" id="user" class="user smarthphone">
+                <img src="/images/menu.ico" id="menu" class="menu smarthphone"></img>
+
+                <!-- DROPDOWN PARA CELULARES -->
+                <div class="dropdown-menu smarthphone" id="dropdown-menu">
+                    <ul>
+                        <li>Inicio</li>
+                        <li>Sobre</li>
+                        <li>Configurações</li>
+                    </ul>
+                </div>
+                <!-- FIM DROPDOWN -->
             </div>
-            <img class="hero-image" src="/images/hero-student.png">
-        </div>
-    </header>
 
-
-    <section>
-        <!-- proposta --->
-        <article>
-            <div class="container-title-article">
-                <h1 class="title-article">VANTAGENS DE UTILIZAR A MONTECH</h1>
+            <div class="hero">
+                <div class="hero-text">
+                    <h1 class="hero-text-title">MELHOR MONITOR ESCOLAR DO BRASIL!</h1><br>
+                    <p class="hero-text-details">Facilidade, privacidade e consciencia.</p>
+                    <button class="hero-text-button">Conferir</button>
+                </div>
+                <img class="hero-image" src="/images/hero-student.png">
             </div>
-            <ul class="propostas">
-                <li class="proposta-card card1">
-                    <i class="fa-solid fa-bolt fa-2xl proposta-icon"></i>
-                    <h2 class="proposta-card-title">Maior Desenvolvimento</h2>
-                    <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Animi,
-                        aspernatur laudantium,
-                        reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
-                        eum atque. Recusandae, voluptatem.</p>
-                </li>
-                <li class="proposta-card card2 ">
-                    <i class="fa-solid fa-fire fa-2xl proposta-icon"></i>
-                    <h2 class="proposta-card-title">Melhores Notas</h2>
-                    <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Animi,
-                        aspernatur laudantium,
-                        reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab
-                        quos
-                        eum atque. Recusandae, voluptatem.</p>
-                    </div>
-                </li>
-                <li class="proposta-card card3">
-                    <i class="fa-solid fa-brain fa-2xl proposta-icon"></i>
-                    <h2 class="proposta-card-title">Melhor Saude Mental</h2>
-                    <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Animi,
-                        aspernatur laudantium,
-                        reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
-                        eum atque. Recusandae, voluptatem.</p>
-                </li>
-                <li class="proposta-card card4">
-                    <i class="fa-solid fa-heart fa-2xl proposta-icon"></i>
-                    <h2 class="proposta-card-title">Melhor Acompanhamento</h2>
-                    <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Animi,
-                        aspernatur laudantium,
-                        reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
-                        eum atque. Recusandae, voluptatem.</p>
-                </li>
-                <li class="proposta-card card5">
-                    <i class="fa-regular fa-face-laugh-beam fa-2xl proposta-icon"></i>
-                    <h2 class="proposta-card-title">Melhor Humor</h2>
-                    <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Animi,
-                        aspernatur laudantium,
-                        reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
-                        eum atque. Recusandae, voluptatem.</p>
-                </li>
-            </ul>
-        </article>
+        </header>
 
-        <!-- Dados --->
-        <article>
+        <section>
+            <!-- proposta --->
+            <article>
+                <div class="container-title-article">
+                    <h1 class="title-article">VANTAGENS DE UTILIZAR A MONTECH</h1>
+                </div>
+                <ul class="propostas">
+                    <li class="proposta-card card1">
+                        <i class="fa-solid fa-bolt fa-2xl proposta-icon"></i>
+                        <h2 class="proposta-card-title">Maior Desenvolvimento</h2>
+                        <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Animi,
+                            aspernatur laudantium,
+                            reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab
+                            quos
+                            eum atque. Recusandae, voluptatem.</p>
+                    </li>
+                    <li class="proposta-card card2 ">
+                        <i class="fa-solid fa-fire fa-2xl proposta-icon"></i>
+                        <h2 class="proposta-card-title">Melhores Notas</h2>
+                        <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Animi,
+                            aspernatur laudantium,
+                            reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab
+                            quos
+                            eum atque. Recusandae, voluptatem.</p>
+    </div>
+    </li>
+    <li class="proposta-card card3">
+        <i class="fa-solid fa-brain fa-2xl proposta-icon"></i>
+        <h2 class="proposta-card-title">Melhor Saude Mental</h2>
+        <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Animi,
+            aspernatur laudantium,
+            reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
+            eum atque. Recusandae, voluptatem.</p>
+    </li>
+    <li class="proposta-card card4">
+        <i class="fa-solid fa-heart fa-2xl proposta-icon"></i>
+        <h2 class="proposta-card-title">Melhor Acompanhamento</h2>
+        <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Animi,
+            aspernatur laudantium,
+            reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
+            eum atque. Recusandae, voluptatem.</p>
+    </li>
+    <li class="proposta-card card5">
+        <i class="fa-regular fa-face-laugh-beam fa-2xl proposta-icon"></i>
+        <h2 class="proposta-card-title">Melhor Humor</h2>
+        <p class="proposta-card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Animi,
+            aspernatur laudantium,
+            reiciendis illo laboriosam tempore in hic eveniet ea officia dicta, inventore sint? Id ab quos
+            eum atque. Recusandae, voluptatem.</p>
+    </li>
+    </ul>
+    </article>
+
+    <!-- Dados --->
+    <article>
+        <div>
+
             <div>
 
-                <div>
-
-                </div>
-                <div>
-
-                </div>
             </div>
-        </article>
+            <div>
 
-        <!-- resultado esperado --->
-        <article>
+            </div>
+        </div>
+    </article>
 
-        </article>
+    <!-- resultado esperado --->
+    <article>
 
-        <!-- sobre a equipe --->
-        <article>
+    </article>
 
-        </article>
+    <!-- sobre a equipe --->
+    <article>
 
+    </article>
 
     </section>
 
-
     <footer>
+        <div>
+            <h1>Fim do site</h1>
+            <span>Desenvolvido Por: </span><a href="">Cm² Tecnologia</a>
+        </div>
+
     </footer>
+    </div>
+
 
     <script src="/js/front/home.js"></script>
 </body>

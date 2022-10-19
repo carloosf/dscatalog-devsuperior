@@ -10,10 +10,12 @@
   font-weight: bold;
 }
 
-body {
+body,
+html {
   height: 100vh;
   width: 100vw;
   background-color: var(--cor-secundaria);
+  position: relative;
 }
 
 .sidebar {
@@ -50,7 +52,9 @@ body {
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 0 1px 0.001px;
+  overflow: hidden;
 }
+
 
 #menu {
   position: relative;
@@ -96,7 +100,6 @@ li:hover {
   width: 100%;
 }
 
-
 .icons-menu {
   width: 18px;
   margin-right: 10px;
@@ -104,9 +107,11 @@ li:hover {
 
 .turma-nome {
   position: relative;
-  left: 12%;
+  left: 7%;
+  align-self: center;
   color: #e8f1f2;
   transition: left 0.8s;
+  top: 9px;
 }
 
 .container-pesquisa {
@@ -118,7 +123,7 @@ li:hover {
   right: 5%;
 }
 
-.pesquisa{
+.pesquisa {
   width: 50%;
   display: flex;
   position: relative;
@@ -135,16 +140,15 @@ li:hover {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-  
 }
 
-.pesquisa-campo:focus{
+.pesquisa-campo:focus {
   color: #00B4CC;
 }
 
 .pesquisa-button {
   width: 40px;
-  height: 36px;
+  height: 38.5px;
   border: 1px solid #00B4CC;
   background-color: #00B4CC;
   text-align: center;
@@ -154,22 +158,92 @@ li:hover {
   font-size: 20px;
 }
 
-.tools-painel{
-  background-color: #d0d9e0;
-  min-height: 40px;
-  max-height: 80px;
+/* NAV */
+
+.tools-painel {
+  background-color: var(--cor-terciaria);
+  height: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tools-painel-sala{
   width: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  
+  justify-content: flex-start;
+  margin-left: 1.1%;
 }
 
-
-main {
-  background-color: var(--cor-secundaria);
-  width: 100%;
-  height: 90%;
+.config-sala {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
+.open-cadastro-aluno {
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+}
+.add-aluno{
+  position: relative;
+  bottom: 4px;
+  margin-right: 15px;
+}
+
+.alunos-nav {
+  padding: 0;
+  margin: 0;
+}
+
+/* Tabela*/
+
+.container-table {
+  background-color: aliceblue;
+  min-width: 100%;
+  min-height: 70%;
+  color: black;
+}
+
+.tabela-aluno {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.tabela-aluno * {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #bbb8b8;
+}
+
+.coluna-item {
+  background-color: rgb(79, 76, 76);
+  color: white;
+}
+
+tr:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form * {
+  padding: 10px;
+  margin-inline: 10px;
+}
+
+.qtd-alunos {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0;
+  margin: 2px;
+}
