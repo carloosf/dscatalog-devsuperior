@@ -3,6 +3,7 @@
 ## :page_facing_up: Sobre o Projeto
 - Este projeto trata-se de uma landing page desenvolvida no Visual Studio Code com a finalidade de pôr em prática meus conhecimentos em JS.
 - Criado em 03/10/2022
+- Previsão de finalização em 30/11/2022
 ---
 
 ## :framed_picture: Imagens do Projeto
