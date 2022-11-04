@@ -92,6 +92,7 @@ li:hover {
   height: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  box-shadow: 0;
 }
 
 .container-menu-name {

@@ -15,7 +15,7 @@
 
 <body>
 
-  <header class="header" style="box-shadow: 15px 15px 10px 20px gray;">
+  <header class="header">
     <div class="container-menu-name">
       <img src="/images/menu.ico" id="menu"></img>
       <p class="turma-nome" id="turma-nome">GRA0280102DNB</p>
@@ -38,20 +38,41 @@
     </div>
 
     <ul>
-      <li> <img src="/images/home.png" class="icons-menu" alt=""> Inicio</li>
-      <li> <img src="/images/book.png" class="icons-menu" alt=""> Salas</li>
-      <li> <img src="/images/responsavel.png" class="icons-menu" alt=""> Responsavel</li>
-      <li> <img src="/images/data.png" class="icons-menu" alt=""> Dados</li>
-      <li> <img src="/images/about.png" class="icons-menu" alt=""> Sobre</li>
-      <li> <img src="/images/settings.png" class="icons-menu" alt=""> Configurações</li>
+      <a href="/pages/escola/home-instituicao.html">
+        <li> <img src="/images/home.png" class="icons-menu" alt=""> Inicio</li>
+      </a>
+
+      <a href="/pages/escola/salas-instituicao.html">
+        <li> <img src="/images/book.png" class="icons-menu" alt=""> Salas</li>
+      </a>
+      <a href="">
+        <li> <img src="/images/responsavel.png" class="icons-menu" alt=""> Responsavel</li>
+      </a>
+      <a href="">
+        <li> <img src="/images/data.png" class="icons-menu" alt=""> Dados</li>
+      </a>
+
+      <a href="">
+        <li> <img src="/images/about.png" class="icons-menu" alt=""> Sobre</li>
+      </a>
+
+      <a href="">
+        <li> <img src="/images/settings.png" class="icons-menu" alt=""> Configurações</li>
+      </a>
+
+      <a href="">
+        <li> <img src="/images/logout.png" class="icons-menu" alt=""> Sair</li>
+      </a>
     </ul>
   </div>
+
 
   <nav class="tools-painel">
 
     <div class="tools-painel-sala">
-      
-      <button type="button" class="btn btn-success mt-2 ml-2 add-aluno" data-toggle="modal" data-target="#meuModal">Adicionar
+
+      <button type="button" class="btn btn-success mt-2 ml-2 add-aluno" data-toggle="modal"
+        data-target="#meuModal">Adicionar
         aluno</button>
       <div class="alunos-nav"><span> Alunos(</span> <span id="qtd-alunos" class="qtd-alunos">0</span> <span>)</span>
 
@@ -72,9 +93,9 @@
                 <form action="/action_page.php">
 
                   <div class="input-group mb-3">
-                    <span class="input-group-text">Matricula</span>
+                    <label class="input-group-text">Matricula</label>
                     <input type="text" class="form-control" id="matricula" placeholder="Matricula"
-                      aria-label="Matricula" aria-describedby="basic-addon1" pattern="{0-9}[2]" required />
+                      aria-label="Matricula" aria-describedby="basic-addon1" pattern="[1-9]{8}" required />
                   </div>
 
                   <div class="input-group mb-3">
@@ -97,8 +118,8 @@
 
                   <div class="mb-3">
                     <select class="form-select form-select-sm" id="status" aria-label=".form-select-sm example">
-                      <option selected>Ativo</option>
-                      <option value="1">Inativo</option>
+                      <option value='0'>Ativo</option>
+                      <option>Inativo</option>
                     </select>
                   </div>
                 </form>
@@ -108,8 +129,8 @@
               <!-- Rodapé do modal-->
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" onclick="addAluno()" class="btn btn-primary" data-dismiss="modal">Adicionar
+                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="submit" onclick="addAluno()" class="btn btn-primary" data-dismiss="modal">Adicionar
                   Aluno</button>
               </div>
             </div>

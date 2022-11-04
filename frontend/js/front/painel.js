@@ -61,7 +61,11 @@ function addAluno() {
   matricula.innerHTML = document.querySelector('#matricula').value;
   idade.innerHTML = document.querySelector('#idade').value;
   media.innerHTML = 0
-  Status.innerHTML = document.querySelector('#status').value;
+  if (document.querySelector('#status').value == 0) {
+    Status.innerHTML = "Ativo"
+  } else {
+    Status.innerHTML = "Inativo"
+  }
+
   addContador()
 }
-
