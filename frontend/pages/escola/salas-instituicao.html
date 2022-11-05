@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/painel.css">
+    <link rel="icon" type="image/x-icon" href="/images/linkimage.png">
+
     <link rel="stylesheet" href="/css/salas-instituicao.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -68,10 +70,11 @@
 
         <div class="tools-painel-sala">
 
-            <button type="button" class="btn btn-success mt-2 ml-2 add-aluno" data-toggle="modal"
+            <button type="button" class="btn btn-success mt-2 ml-2 add-turmas" data-toggle="modal"
                 data-target="#meuModal">Adicionar
                 Turma</button>
-            <div class="alunos-nav"><span> Turmas(</span> <span id="qtd-alunos" class="qtd-alunos">0</span>
+            <div class="alunos-nav"><span class="turmastext"> Turmas(</span> <span id="qtd-turmas"
+                    class="qtd-turmas">0</span>
                 <span>)</span>
 
 
@@ -81,7 +84,7 @@
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h3>Cadastrar Novo Aluno</h3>
+                                <h3>Cadastrar Nova Turma</h3>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
 
@@ -92,10 +95,8 @@
 
                                     <div class="input-group mb-3">
                                         <label class="input-group-text">Max. Alunos</label>
-                                        <input type="number" class="form-control" id="maxturma" placeholder="maxturma"
-                                            aria-label="maxturma" aria-describedby="basic-addon1" pattern="[1-9]{2}"
-                                            required />
-                                    </div>
+                                        <input type="number" class="form-control" id="maxalunos" aria-label="maxalunos"
+                                            aria-describedby="basic-addon1" pattern="[1-9]{2}" required />
                                     </div>
                                 </form>
 
@@ -105,9 +106,9 @@
 
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" onclick="addAluno()" class="btn btn-primary"
+                                <button type="submit" onclick="addTurma()" class="btn btn-primary"
                                     data-dismiss="modal">Adicionar
-                                    Aluno</button>
+                                    Turma</button>
                             </div>
                         </div>
 
@@ -117,22 +118,36 @@
             </div>
         </div>
     </nav>
-
     <main>
-        <ul class="salas-cards">
-            <li id="turmas" class="salas-cards-uni">
-                <p>GRA0280102DNB</p>
+        <ul id="salas-cards" class="salas-cards">
+            <a href="/pages/escola/salas/painel-sala.html">
+                <li id="turmas" class="salas-cards-uni">
+                    <p>GRA0280102DNB</p>
 
-                <p>42 Alunos</p>
-            </li>
+                    42 Alunos
+                </li>
+            </a>
+
             <li id="turmas" class="salas-cards-uni">
                 <p class="turma-title">GRA0280102DNA</p>
                 <p>42 Alunos</p>
             </li>
+
             <li id="turmas" class="salas-cards-uni">
                 <p class="turma-title">GRA0280102DNC</p>
                 <p>42 Alunos</p>
             </li>
+
+            <li class="salas-cards-uni">
+                <p class="turma-title">GRA0280102DND</p>
+                <p>42 Alunos</p>
+            </li>
+
+            <li class="salas-cards-uni">
+                <p class="turma-title">GRA0280102DND</p>
+                <p>42 Alunos</p>
+            </li>
+
             <li class="salas-cards-uni">
                 <p class="turma-title">GRA0280102DND</p>
                 <p>42 Alunos</p>
@@ -140,7 +155,9 @@
         </ul>
     </main>
 
-    <script src="/js/front/painel.js"></script>
+    <script src="/js/front/salas.js"></script>
+    <script src="/js/front/slidebar.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -150,6 +167,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

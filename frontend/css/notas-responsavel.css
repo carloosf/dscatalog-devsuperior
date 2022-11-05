@@ -1,0 +1,29 @@
+.container-table {
+    background-color: aliceblue;
+    min-width: 100%;
+    min-height: 70%;
+    color: black;
+}
+
+.tabela-aluno {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.tabela-aluno * {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #bbb8b8;
+}
+
+.coluna-nota {
+    background-color: rgb(79, 76, 76);
+    color: white;
+}
+
+tr:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}

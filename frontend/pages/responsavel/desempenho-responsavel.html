@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/linkimage.png">
+    <link rel="stylesheet" href="/">
     <link rel="stylesheet" href="/css/painel.css">
-    <link rel="stylesheet" href="/css/home-instituicao.css">
-
-    <link rel="icon" type="image/x-icon" href="/images/linkimage.png" >
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,21 +15,53 @@
     <title>Painel Escolar - Montech</title>
 </head>
 
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    @import "/css/cores.css";
+
+    .list-card-respo {
+        margin-top: 10%;
+        width: 100vw;
+        height: 20vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 80px;
+    }
+
+    .card-respo:hover {
+        background-color: #017171;
+        opacity: 90%;
+    }
+
+    .card-respo:active {
+        background-color: #044949;
+        opacity: 90%;
+    }
+
+    .card-respo {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        background-color: #008C8C;
+        width: 250px;
+        height: 150px;
+    }
+
+    .img-card {
+        margin: 0 auto;
+        width: 40px;
+    }
+</style>
 <body>
 
     <header class="header">
         <div class="container-menu-name">
-            <img src="/images/menu.ico" id="menu"></img>
+            <header class="header" style="display: flex; ">
+                <img src="/images/menu.ico" id="menu"></img>
+            </header>
         </div>
 
-        <div class="container-pesquisa">
-            <div class="pesquisa">
-                <input type="text" class="pesquisa-campo" placeholder="O que deseja procurar?">
-                <button type="submit" class="pesquisa-button">
-                    <img src="/images/lupa.png" style="width: 35px;"></img>
-                </button>
-            </div>
-        </div>
     </header>
 
     <div class="sidebar" id="sidebar">
@@ -41,42 +71,34 @@
         </div>
 
         <ul>
-            <a href="/pages/escola/home-instituicao.html">
-                <li> <img src="/images/home.png" class="icons-menu" alt=""> Inicio</li>
-            </a>
-
-            <a href="/pages/escola/salas-instituicao.html">
-                <li> <img src="/images/book.png" class="icons-menu" alt=""> Salas</li>
-            </a>
-
-            <a href="">
-                <li> <img src="/images/data.png" class="icons-menu" alt=""> Dados</li>
-            </a>
-
-            <a href="">
-                <li> <img src="/images/about.png" class="icons-menu" alt=""> Sobre</li>
-            </a>
-
-            <a href="">
-                <li> <img src="/images/settings.png" class="icons-menu" alt=""> Configurações</li>
-            </a>
-
-            <a href="../../home.html">
-                <li> <img src="/images/logout.png" class="icons-menu" alt=""> Sair</li>
-            </a>
+            <ul>
+                <a href="home-responsavel.html">
+                    <li> <img src="/images/home.png" class="icons-menu" alt=""> Inicio</li>
+                </a>
+    
+                <a href="">
+                    <li> <img src="/images/settings.png" class="icons-menu" alt=""> Configurações</li>
+                </a>
+    
+                <a href="../../home.html">
+                    <li> <img src="/images/logout.png" class="icons-menu" alt=""> Sair</li>
+                </a>
+            </ul>
         </ul>
     </div>
 
-    <div class="main">
-        <h1 class="anotacao-text">ANOTAÇÕES</h1>
+    <main style="display: flex; justify-content: center;">
+        <img src="/images/grafico-clovis.png" alt="" 
+        style="width: 60vw;
+        margin-top: 30px;
+        "
+        >
+    </main>
 
-        <textarea  class='anotacoes' name="" id="" cols="30" rows="10" placeholder="Anotações..."></textarea>
-        <button class="save-notes">Salvar</button>
-    </div>
+
 
     <script src="/js/front/painel.js"></script>
     <script src="/js/front/slidebar.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

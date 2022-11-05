@@ -1,3 +1,43 @@
-{
-    
+@import "/css/cores.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
+
+.main {
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.anotacoes {
+    resize: none;
+    width: 1000px;
+    height: 300px;
+    word-break: break-all;
+    margin-bottom: 20px;
+    background-color: rgb(238, 233, 233);
+    padding: 20px;
+    color: rgb(70, 69, 69);
+}
+
+.save-notes {
+    margin: 0 80%;
+    width: 15vw;
+    height: 40px;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: beige;
+}
+
+.anotacao-text {
+    color: var(--cor-primaria);
+    width: 20vw;
+}
+
